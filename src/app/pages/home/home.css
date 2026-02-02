@@ -1,0 +1,19 @@
+/* Додаткові ефекти для карток */
+.custom-card {
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #3273dc;
+}
+
+/* Налаштування відступів для Hero на мобільних */
+@media screen and (max-width: 768px) {
+    .hero-body {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+}
