@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+/* Підключення Bulma через CDN, якщо немає локальної */
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+/* Додаткові глобальні фікси */
+html {
+  background-color: #f5f5f5; /* Світло-сірий фон для всього сайту */
+}
+
+.container {
+  padding: 0 15px;
+}

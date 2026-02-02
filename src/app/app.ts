@@ -1,16 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+// src/app/app.component.ts
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar'; // Імпортуйте ваш Navbar
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  standalone: true, // Якщо ви використовуєте Angular 17+
+  imports: [RouterOutlet, NavbarComponent], // Додайте компоненти сюди
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrl: './app.css'
 })
-export class App {
-  isMenuOpen = false;
+export class AppComponent {
+  title = 'theme-bulma';
 }
-
-
-
