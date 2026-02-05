@@ -19,9 +19,9 @@
 	--c-bg-tertiary: #fcfdfe;
 
 	/* content */
-	--c-text-primary: #5f6066;
-	--c-text-secondary: #17224f;
-	--c-text-muted: #8b8d94;
+	--c-text-primary: #333333;
+	--c-text-secondary: #000000;
+	--c-text-muted: #666666;
 	--c-placeholder: #313335ab;
 
 	/* borders & elevation */
@@ -89,25 +89,18 @@ html[data-mode='dark'] {
 /* ITKP = city brand colors */
 html[data-mode='itkp'] {
 	/* primary brand palette */
-	--c-bg-primary: #005bbb; /* deep sky blue — representing blue sky & official flag field */
-	--c-bg-secondary: #f7c948; /* warm gold yellow — sun, stone highlights */
-	--c-bg-tertiary: #d9cba3; /* light stone/beige — historic stone facades and plaster */
+	--c-bg-primary: #f0f7ff; /* light blue-ish background */
+	--c-bg-secondary: #ffffff; /* white cards */
+	--c-bg-tertiary: #ffd700; /* gold/yellow accent */
 
-	/* accent & nature tones */
-	--c-bg-accent: #6a8a62; /* muted green — canyon/greenery context */
+	/* content */
+	--c-text-primary: #1a1a1a;
+	--c-text-secondary: #003366; /* dark blue text */
+	--c-text-muted: #4d4d4d;
 
-	/* text */
-	--c-text-primary: #1b1b1b; /* near black for strong readability on light surfaces */
-	--c-text-secondary: #f7f1e1; /* off-white for contrast on dark blue */
-	--c-text-muted: #7a7a7a; /* neutral muted/stone text tone */
-
-	/* borders & elevation */
-	--c-border: #a69f8e; /* stone-neutral border */
-	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
-	--shadow-md: 0 8px 20px rgba(0, 0, 0, 0.3);
-
-	/* focus ring */
-	--focus-ring: 0 0 0 3px rgba(255, 200, 80, 0.45);
+	/* brand */
+	--c-primary: #005bbb;
+	--c-border: #ccddee;
 }
 
 /* ========= density ========= */
@@ -124,9 +117,168 @@ html[data-density='compact'] {
 	--gutter: 8px;
 }
 
+html[data-density='compact'] .section {
+	--bulma-section-padding: var(--sp-4) var(--sp-2);
+}
+
+html[data-density='compact'] .card-content {
+	padding: var(--sp-3);
+}
+
+html[data-density='compact'] .navbar-item {
+	padding: var(--sp-2) var(--sp-3);
+}
+
 /* ========= radius ========= */
 html[data-radius='square'] {
 	--radius: 0px;
 	--radius-card: 0px;
 	--radius-btn: 0px;
+}
+
+/* ========= Global Overrides & Bulma Mapping ========= */
+:root {
+	--bulma-body-background-color: var(--c-bg-primary);
+	--bulma-text: var(--c-text-primary);
+	--bulma-text-strong: var(--c-text-secondary);
+	--bulma-title-color: var(--c-text-secondary);
+	--bulma-subtitle-color: var(--c-text-primary);
+	--bulma-card-background-color: var(--c-bg-secondary);
+	--bulma-card-color: var(--c-text-primary);
+	--bulma-card-header-color: var(--c-text-secondary);
+	--bulma-border: var(--c-border);
+	--bulma-scheme-main: var(--c-bg-primary);
+	--bulma-scheme-main-bis: var(--c-bg-secondary);
+	--bulma-scheme-main-ter: var(--c-bg-tertiary);
+	--bulma-link: var(--c-primary);
+	--bulma-link-hover: var(--c-primary-hover);
+
+	/* Радіуси для всіх компонентів Bulma */
+	--bulma-radius: var(--radius);
+	--bulma-radius-small: calc(var(--radius) * 0.75);
+	--bulma-radius-medium: var(--radius);
+	--bulma-radius-large: calc(var(--radius) * 1.5);
+	--bulma-control-radius: var(--radius-btn);
+	--bulma-card-radius: var(--radius-card);
+
+	/* Щільність (відступи) для компонентів */
+	--bulma-block-spacing: var(--sp-6);
+	--bulma-section-padding: var(--sp-8) var(--sp-4);
+}
+
+body {
+	background-color: var(--c-bg-primary);
+	color: var(--c-text-primary);
+	min-height: 100vh;
+}
+
+.card {
+	background-color: var(--c-bg-secondary);
+	color: var(--c-text-primary);
+	border: 1px solid var(--c-border);
+	box-shadow: var(--shadow-sm);
+	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.title {
+	color: var(--c-text-secondary) !important;
+}
+
+/* Specific Glow for Main Page Titles */
+.main-title-glow {
+	text-shadow: 0 0 20px rgba(37, 110, 255, 0.3);
+	position: relative;
+	display: inline-block;
+	width: auto;
+}
+
+html[data-mode='dark'] .main-title-glow {
+	text-shadow: 0 0 30px rgba(140, 103, 239, 0.5);
+}
+
+.subtitle {
+	color: var(--c-text-primary) !important;
+}
+
+.card .title,
+.card .subtitle,
+.card .content {
+	color: inherit !important;
+}
+
+.navbar {
+	background-color: var(--c-bg-secondary);
+	border-bottom: 1px solid var(--c-border);
+}
+
+.navbar-item {
+	color: var(--c-text-primary);
+}
+
+.navbar-item:hover,
+.navbar-item.is-active {
+	background-color: var(--c-bg-tertiary);
+	color: var(--c-primary);
+}
+
+/* Button & Tag Overrides */
+.button.is-link {
+	background-color: var(--c-primary);
+	border-color: var(--c-primary);
+	color: #ffffff !important;
+}
+
+.button.is-link:hover {
+	background-color: var(--c-primary-hover);
+	border-color: var(--c-primary-hover);
+}
+
+.button.is-link.is-light {
+	background-color: var(--c-bg-tertiary);
+	color: var(--c-primary) !important;
+	border-color: var(--c-border);
+}
+
+.button:not(.is-link):not(.is-primary):not(.is-static) {
+	background-color: var(--c-bg-secondary);
+	color: var(--c-text-primary);
+	border-color: var(--c-border);
+}
+
+.button:not(.is-link):not(.is-primary):not(.is-static):hover {
+	background-color: var(--c-bg-tertiary);
+}
+
+.tag.is-link {
+	background-color: var(--c-primary);
+	color: #ffffff;
+}
+
+.tag.is-link.is-light {
+	background-color: var(--c-bg-tertiary);
+	color: var(--c-primary);
+	border: 1px solid var(--c-border);
+}
+
+/* Input Overrides */
+.input, .textarea, .select select {
+	background-color: var(--c-bg-secondary) !important;
+	color: var(--c-text-primary) !important;
+	border-color: var(--c-border) !important;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.input::placeholder, .textarea::placeholder {
+	color: var(--c-placeholder) !important;
+}
+
+.input:focus, .textarea:focus, .select select:focus {
+	border-color: var(--c-primary) !important;
+	box-shadow: var(--focus-ring) !important;
+}
+
+.button.is-static {
+	background-color: var(--c-bg-tertiary) !important;
+	color: var(--c-text-muted) !important;
+	border-color: var(--c-border) !important;
 }

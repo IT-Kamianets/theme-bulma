@@ -1,9 +1,9 @@
-﻿:host {
+:host {
 	display: block;
 }
 
 .pricing__section {
-	background: var(--c-bg-secondary);
+	background: var(--c-bg-primary);
 	color: var(--c-text-primary);
 	padding: var(--sp-8) 0;
 }
@@ -18,10 +18,7 @@
 }
 
 .pricing__card {
-	border: 1px solid var(--c-border);
-	border-radius: var(--radius-card);
-	box-shadow: var(--shadow-sm);
-	background: var(--c-bg-secondary);
+	/* Uses global .card styles from styles.css */
 }
 
 .pricing__body {
@@ -35,44 +32,42 @@
 .pricing__list {
 	list-style: none;
 	margin-left: 0;
+	color: var(--c-text-primary);
 }
 
 .pricing__card--pro {
-	border: 1px solid var(--c-border);
-	border-radius: var(--radius-card);
-	box-shadow: var(--shadow-sm);
-	background: var(--c-bg-secondary);
-}
-
-.pricing__body--pro {
-	padding: var(--sp-7);
-}
-
-.pricing__price--pro {
-	color: var(--c-text-secondary);
-}
-
-.pricing__muted--pro {
-	color: var(--c-text-muted);
+	border: 2px solid var(--c-primary);
+	position: relative;
+	transform: scale(1.02);
+	z-index: 1;
 }
 
 .pricing__tag {
 	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.15);
-	color: #fff;
-	border: 1px solid rgba(255, 255, 255, 0.25);
+	background: var(--c-primary);
+	color: #ffffff !important;
+	border: none;
 }
 
 .pricing__btnPrimary {
-	background: var(--c-bg-secondary);
+	background: var(--c-primary);
+	border-color: var(--c-primary);
+	color: #ffffff !important;
+	border-radius: var(--radius-btn);
+}
+
+.pricing__btnPrimary:hover {
+	background: var(--c-primary-hover);
+	border-color: var(--c-primary-hover);
+}
+
+.pricing__btnSoft {
+	background: var(--c-bg-tertiary);
 	border: 1px solid var(--c-border);
 	color: var(--c-text-secondary);
 	border-radius: var(--radius-btn);
 }
 
-.pricing__btnSoft {
+.pricing__btnSoft:hover {
 	background: var(--c-bg-secondary);
-	border: 1px solid var(--c-border);
-	color: var(--c-text-secondary);
-	border-radius: var(--radius-btn);
 }
