@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './profile.html',
   styleUrls: ['./profile.css'] // Якщо створиш css файл
 })
-export class ProfileComponent {
+export class Profile {
   // Статичні дані для відображення (бо ми без ID)
   product = {
     title: 'Супер Гаджет Pro',

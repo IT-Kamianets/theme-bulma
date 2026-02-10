@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './list-item.html',
   styleUrls: ['./list-item.css']
 })
-export class ListItemComponent {
+export class ListItem {
   @Input() item: any;
   @Input() index: number = 0;
 

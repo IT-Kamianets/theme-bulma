@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListItemComponent } from '../../../components/list-item/list-item'; // Шлях до картки
+import { ListItem } from '../../../components/list-item/list-item'; // Шлях до картки
 
 @Component({
   selector: 'app-list-page', 
   standalone: true,
-  imports: [CommonModule, ListItemComponent],
+  imports: [CommonModule, ListItem],
   templateUrl: './list-item.html', 
   styleUrls: ['./list-item.css']
 })
-export class ListItemsComponent { 
+export class ListPage { 
 
   // Розширений список товарів (12 штук)
   allProducts = [

@@ -9,7 +9,7 @@ import { ThemeService } from 'wacom';
 	templateUrl: './app.html',
 	styleUrl: './app.css',
 })
-export class AppComponent {
+export class App {
 	private _themeService = inject(ThemeService);
 
 	constructor() {

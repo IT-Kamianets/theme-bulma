@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ListItemsComponent } from "./list-item/list-item";
+import { ListPage } from "./list-item/list-item";
 
 
 @Component({

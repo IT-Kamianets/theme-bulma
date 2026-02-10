@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListItemComponent } from '../list-item/list-item';
+import { ListItem } from '../list-item/list-item';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-list-items',
   standalone: true,
-  imports: [CommonModule, ListItemComponent, RouterModule], // Імпортуємо малий, щоб юзати в HTML
+  imports: [CommonModule, ListItem, RouterModule], // Імпортуємо малий, щоб юзати в HTML
   templateUrl: './list-items-section.html',
   styleUrls: ['./list-items-section.css']
 })
-export class ListItemsComponent {
+export class ListItemsSection {
   // Фейкові дані для візуалізації
   products = [
     {

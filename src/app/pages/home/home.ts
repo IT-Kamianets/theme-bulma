@@ -10,7 +10,7 @@ import { Showcase } from '../../components/showcase/showcase';
 import { Testimonials } from '../../components/testimonials/testimonials';
 import { TrustBar } from '../../components/trust-bar/trust-bar';
 import { UseCases } from '../../components/use-cases/use-cases';
-import { ListItemsComponent} from '../../components/list-items-section/list-items-section';
+import { ListItemsSection} from '../../components/list-items-section/list-items-section';
 
 
 @Component({
@@ -26,7 +26,7 @@ import { ListItemsComponent} from '../../components/list-items-section/list-item
 		Pricing,
 		Faq,
 		FinalCta,
-		ListItemsComponent,
+		ListItemsSection,
 	],
 	templateUrl: './home.html',
 	styleUrl: './home.css',
