@@ -1,26 +1,26 @@
 import { Routes } from '@angular/router';
-import { Public } from './layouts/public/public';
-import { Content } from './pages/content/content';
-import { Form } from './pages/form/form';
-import { Gallery } from './pages/gallery/gallery';
-import { Home } from './pages/home/home';
-import { Profile } from './pages/profile/profile';
-import { Table } from './pages/table/table';
-import { ListPage } from './pages/list/list-item/list-item';
+import { PublicComponent } from './layouts/public/public.component';
+import { ContentComponent } from './pages/content/content.component';
+import { FormComponent } from './pages/form/form.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { TableComponent } from './pages/table/table.component';
+import { ListPageComponent } from './pages/list/list-item/list-item.component';
 
 export const routes: Routes = [
 	{
 		path: '',
-		component: Public,
+		component: PublicComponent,
 		children: [
 			{path: '', redirectTo: 'home', pathMatch: 'full' },
-			{ path: 'home', component: Home },
-			{ path: 'list', component: ListPage },
-			{ path: 'profile', component: Profile },
-			{ path: 'form', component: Form },
-			{ path: 'table', component: Table },
-			{ path: 'gallery', component: Gallery },
-			{ path: 'content', component: Content },
+			{ path: 'home', component: HomeComponent },
+			{ path: 'list', component: ListPageComponent },
+			{ path: 'profile', component: ProfileComponent },
+			{ path: 'form', component: FormComponent },
+			{ path: 'table', component: TableComponent },
+			{ path: 'gallery', component: GalleryComponent },
+			{ path: 'content', component: ContentComponent },
 		],
 	},
 ];
