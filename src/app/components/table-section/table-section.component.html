@@ -9,7 +9,7 @@
 	<table class="table is-fullwidth is-striped">
 		<thead>
 			<tr>
-				<th *ngFor="let c of columns" (click)="sortBy(c.key)" style="cursor:pointer">
+				<th *ngFor="let c of columns" (click)="sortBy(c.key)" style="cursor: pointer">
 					{{ c.label }}
 					<span *ngIf="sortKey === c.key">{{ sortDir === 1 ? '▲' : '▼' }}</span>
 				</th>

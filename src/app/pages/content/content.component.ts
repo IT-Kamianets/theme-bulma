@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 interface BlogPost {
@@ -31,7 +31,8 @@ export class ContentComponent {
 		{
 			id: 1,
 			title: 'The Future of Web Design',
-			excerpt: 'Exploring the latest trends in UI/UX and how they shape the digital landscape.',
+			excerpt:
+				'Exploring the latest trends in UI/UX and how they shape the digital landscape.',
 			category: 'Design',
 			date: 'Feb 5, 2026',
 			image: 'https://picsum.photos/id/1/800/400',
@@ -63,7 +64,8 @@ export class ContentComponent {
 		{
 			id: 5,
 			title: 'Brand Identity Matters',
-			excerpt: 'Why consistent branding is the foundation of any successful marketing campaign.',
+			excerpt:
+				'Why consistent branding is the foundation of any successful marketing campaign.',
 			category: 'Marketing',
 			date: 'Jan 15, 2026',
 			image: 'https://picsum.photos/id/5/800/400',
@@ -121,9 +123,9 @@ export class ContentComponent {
 							...p,
 							transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
 							transitionClass: '',
-					  }
-					: p
-			)
+						}
+					: p,
+			),
 		);
 	}
 
@@ -135,9 +137,9 @@ export class ContentComponent {
 							...p,
 							transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
 							transitionClass: 'is-resetting',
-					  }
-					: p
-			)
+						}
+					: p,
+			),
 		);
 	}
 }

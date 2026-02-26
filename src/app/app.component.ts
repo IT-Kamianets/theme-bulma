@@ -1,5 +1,5 @@
 // src/app/app.component.ts
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ThemeService } from 'wacom';
 
@@ -8,6 +8,7 @@ import { ThemeService } from 'wacom';
 	imports: [RouterOutlet],
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
 	private _themeService = inject(ThemeService);

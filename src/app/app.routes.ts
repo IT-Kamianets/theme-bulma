@@ -4,16 +4,16 @@ import { ContentComponent } from './pages/content/content.component';
 import { FormComponent } from './pages/form/form.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ListPageComponent } from './pages/list/list-item/list-item.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TableComponent } from './pages/table/table.component';
-import { ListPageComponent } from './pages/list/list-item/list-item.component';
 
 export const routes: Routes = [
 	{
 		path: '',
 		component: PublicComponent,
 		children: [
-			{path: '', redirectTo: 'home', pathMatch: 'full' },
+			{ path: '', redirectTo: 'home', pathMatch: 'full' },
 			{ path: 'home', component: HomeComponent },
 			{ path: 'list', component: ListPageComponent },
 			{ path: 'profile', component: ProfileComponent },

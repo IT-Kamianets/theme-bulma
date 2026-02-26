@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-import { ListPageComponent } from './list-item/list-item.component';
-
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
 	selector: 'app-list',
 	standalone: true,
 	templateUrl: './list.component.html',
 	styleUrl: './list.component.scss',
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListComponent {}

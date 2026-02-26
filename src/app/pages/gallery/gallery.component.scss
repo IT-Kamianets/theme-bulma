@@ -26,14 +26,14 @@
 }
 
 .gallery-background::before {
-	background: 
+	background:
 		radial-gradient(circle at 10% 10%, var(--c-primary) 0%, transparent 50%),
 		radial-gradient(circle at 90% 90%, #8c67ef 0%, transparent 50%);
 	opacity: 0.4;
 }
 
 .gallery-background::after {
-	background: 
+	background:
 		radial-gradient(circle at 90% 10%, var(--c-secondary) 0%, transparent 50%),
 		radial-gradient(circle at 10% 90%, var(--c-primary) 0%, transparent 50%);
 	opacity: 0.3;
